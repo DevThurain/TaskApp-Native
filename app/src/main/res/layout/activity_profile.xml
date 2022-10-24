@@ -20,10 +20,70 @@
         android:elevation="0dp"
         android:src="@drawable/ic_close" />
     <include
+        android:id="@+id/vpProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/fabClose"
         android:layout_marginTop="@dimen/margin_xxlarge"
         layout="@layout/view_pod_profile_section"/>
+
+    <RelativeLayout
+        android:id="@+id/rlButtonSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vpProfile"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_medium_2">
+
+        <com.thurainx.taskapp.views.components.CircularImageView
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:padding="12dp"
+            android:tint="@color/color_accent_green"
+            app:srcCompat="@drawable/ic_share"
+            app:strokeColor="@color/color_accent_green" />
+
+        <com.thurainx.taskapp.views.components.CircularImageView
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:padding="12dp"
+            android:tint="@color/color_accent_green"
+            app:srcCompat="@drawable/ic_tasks_complete"
+            app:strokeColor="@color/color_accent_green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfileMessage"
+            android:layout_width="190dp"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/color_accent_green"
+            android:elevation="0dp"
+            android:text="Message"
+            app:cornerRadius="@dimen/margin_large" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnProfileMessage"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/color_accent_green"
+            app:tabTextAppearance="@style/CustomTabTextAppearance"
+            app:tabMode="scrollable"
+            app:tabMinWidth="130dp"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/color_primary"
+            app:tabTextColor="@color/color_dark_grey" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlButtonSection"
+        android:background="@color/color_light_grey" />
 
 </RelativeLayout>
