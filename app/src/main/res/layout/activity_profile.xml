@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_primary"
     tools:context=".activities.ProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        app:fabCustomSize="@dimen/margin_xxlarge"
+        android:scaleType="center"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        android:src="@drawable/ic_close" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fabClose"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        layout="@layout/view_pod_profile_section"/>
+
+</RelativeLayout>

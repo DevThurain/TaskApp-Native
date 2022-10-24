@@ -16,7 +16,15 @@
         <activity
             android:name=".activities.ProfileActivity"
             android:theme="@style/Theme.TaskApp.translucentScreenWhiteStatusBar"
-            android:exported="false" />
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".activities.CreateTaskActivity"
             android:theme="@style/Theme.TaskApp.translucentScreenWhiteStatusBar"
@@ -26,11 +34,7 @@
             android:name=".activities.MainActivity"
             android:theme="@style/Theme.TaskApp.translucentScreenDarkStatusBar"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
