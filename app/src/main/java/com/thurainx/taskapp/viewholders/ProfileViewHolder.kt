@@ -11,11 +11,13 @@ class ProfileViewHolder(itemView: View, delegate: ProfileDelegate) : RecyclerVie
     var mProfile: ProfileVO? = null
 
     init {
-        mProfile?.let { profile ->
+
             itemView.setOnClickListener {
-                delegate.onTapProfile(profile)
+                mProfile?.let {
+                    delegate.onTapProfile(it)
+                }
             }
-        }
+
     }
 
     fun bind(profileVO: ProfileVO){

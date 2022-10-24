@@ -17,7 +17,7 @@ val dummyProfileList = listOf(
         profileImage = R.drawable.avatar3
     ),
     ProfileVO(
-        id = 4,
+        id = 0,
         profileImage = R.drawable.plus
     ),
 )

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_orange_button.xml" value="0.1135" />
+        <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_task_layout.xml" value="0.1135" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/ic_add.xml" value="0.1135" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/font/fonts.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/activity_create_task.xml" value="0.25" />

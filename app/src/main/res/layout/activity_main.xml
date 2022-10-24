@@ -90,33 +90,42 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvProfile"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/lblMainDate"
             android:layout_marginTop="@dimen/margin_medium_2"
             android:clipToPadding="false"
+            android:elevation="180dp"
             android:orientation="horizontal"
+            android:outlineProvider="bounds"
             android:paddingHorizontal="@dimen/margin_medium_2"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="5"
-            tools:listitem="@layout/view_holder_profile"
-            android:elevation="180dp"
-            android:outlineProvider="bounds"
-            />
-
+            tools:listitem="@layout/view_holder_profile" />
 
 
         <com.thurainx.taskapp.views.components.CircularProgressIndicator
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/rvProfile"
-            android:layout_margin="@dimen/margin_medium_2"
-            app:progress="55"
-            app:min="0"
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_alignTop="@id/rvProfile"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
             app:max="100"
-            app:progressBarThickness="@dimen/margin_small"
+            app:min="0"
+            app:progress="55"
             app:progressBarColor="@color/color_accent_orange"
-            />
+            app:progressBarThickness="@dimen/margin_small" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rvProfile"
+            android:background="@drawable/bg_task_layout"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            >
+
+
+        </FrameLayout>
 
 
 
