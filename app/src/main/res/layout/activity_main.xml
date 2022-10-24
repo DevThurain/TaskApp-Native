@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMainBack"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:padding="0dp"
+            app:icon="@drawable/ic_chevron_left"
+            app:iconTint="@color/color_primary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/btnMainBack"
+            android:layout_alignBottom="@id/btnMainBack"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/btnMainBack"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="@string/lbl_omp_dashboard"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/btnMainBack"
+            android:layout_alignBottom="@id/btnMainBack">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_orange_button"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingVertical="@dimen/margin_card_medium"
+                android:paddingHorizontal="@dimen/margin_xlarge"
+                android:text="@string/lbl_in_progress"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblCreateAdditionalPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnMainBack"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/lbl_create_additional_pages"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_heading_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblMainDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCreateAdditionalPages"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/poppins_regular"
+            android:text="03 days | Dec 18, 2019"
+            android:textColor="@color/color_dark_grey"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblMainDate"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/margin_medium_2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/view_holder_profile"
+            android:elevation="180dp"
+            android:outlineProvider="bounds"
+            />
+
+
+
+        <com.thurainx.taskapp.views.components.CircularProgressIndicator
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/rvProfile"
+            android:layout_margin="@dimen/margin_medium_2"
+            app:progress="55"
+            app:min="0"
+            app:max="100"
+            app:progressBarThickness="@dimen/margin_small"
+            app:progressBarColor="@color/color_accent_orange"
+            />
+
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

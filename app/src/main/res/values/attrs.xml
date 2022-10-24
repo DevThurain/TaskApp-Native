@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircularImageView">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressIndicator">
+        <attr name="min" format="integer"/>
+        <attr name="max" format="integer"/>
+        <attr name="progress" format="integer"/>
+        <attr name="progressBarColor" format="color"/>
+        <attr name="progressBarThickness" format="dimension"/>
+    </declare-styleable>
+</resources>
