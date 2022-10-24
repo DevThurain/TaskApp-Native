@@ -19,13 +19,14 @@
         android:backgroundTint="@color/white"
         android:elevation="0dp"
         android:src="@drawable/ic_close" />
+
     <include
         android:id="@+id/vpProfile"
+        layout="@layout/view_pod_profile_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/fabClose"
-        android:layout_marginTop="@dimen/margin_xxlarge"
-        layout="@layout/view_pod_profile_section"/>
+        android:layout_marginTop="@dimen/margin_xxlarge" />
 
     <RelativeLayout
         android:id="@+id/rlButtonSection"
@@ -72,11 +73,11 @@
             android:layout_marginTop="@dimen/margin_medium"
             android:background="@color/white"
             app:tabIndicatorColor="@color/color_accent_green"
-            app:tabTextAppearance="@style/CustomTabTextAppearance"
-            app:tabMode="scrollable"
-            app:tabMinWidth="130dp"
             app:tabIndicatorHeight="3dp"
+            app:tabMinWidth="130dp"
+            app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/color_primary"
+            app:tabTextAppearance="@style/CustomTabTextAppearance"
             app:tabTextColor="@color/color_dark_grey" />
     </RelativeLayout>
 
