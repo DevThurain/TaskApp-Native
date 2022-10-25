@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_medium_2"
         android:padding="0dp"
         app:icon="@drawable/ic_chevron_left"
         app:iconTint="@color/white"
@@ -50,182 +50,343 @@
         android:textSize="@dimen/text_regular_2x"
         android:textStyle="bold" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/lblClient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnCreateBack"
-        android:layout_marginTop="@dimen/margin_medium_2"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center"
-        android:text="@string/lbl_client"
-        android:textColor="@color/color_dark_grey"
-        android:textSize="@dimen/text_regular"
-        android:textStyle="bold" />
 
-    <com.thurainx.taskapp.views.components.CircularImageView
-        android:id="@+id/ivClient"
-        android:layout_width="@dimen/margin_xxlarge"
-        android:layout_height="@dimen/margin_xxlarge"
-        android:layout_below="@id/lblClient"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium"
-        app:strokeColor="@color/white"
-        app:srcCompat="@drawable/avatar2" />
-
-    <androidx.appcompat.widget.AppCompatSpinner
-        style="@style/Widget.AppCompat.Spinner.Underlined"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignTop="@id/ivClient"
-        android:layout_marginHorizontal="@dimen/margin_medium_2"
-        android:layout_toEndOf="@id/ivClient"
-        android:backgroundTint="@color/color_dark_grey"
-        android:entries="@array/clientTeam"
-        android:theme="@style/CustomerSpinnerStyle" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnCreateBack">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/lblProjectName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ivClient"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium_3"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center"
-        android:text="@string/lbl_project_name"
-        android:textColor="@color/color_dark_grey"
-        android:textSize="@dimen/text_regular"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textLayoutProjectName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_medium_2"
-        android:layout_below="@id/lblProjectName"
-        app:boxStrokeColor="@color/custom_edittext_color"
-        app:boxStrokeWidth="1dp"
-        app:boxStrokeWidthFocused="1dp">
-
-        <EditText
-            style="@style/ThemeOverlay.Material3.TextInputEditText"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_primary"
-            android:theme="@style/CustomEditText"
-            android:textColor="@color/white"
-            android:maxLines="1"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/lblProjectDuration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textLayoutProjectName"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium_3"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center"
-        android:text="PROJECT DURATION"
-        android:textColor="@color/color_dark_grey"
-        android:textSize="@dimen/text_regular"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:id="@+id/llChooseDate"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@id/lblProjectDuration"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginHorizontal="@dimen/margin_medium_2">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCreateBack"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/lbl_client"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
 
 
-        <include
-            android:id="@+id/startDate"
-            layout="@layout/view_calendar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            <com.thurainx.taskapp.views.components.CircularImageView
+                android:id="@+id/ivClient"
+                android:layout_width="@dimen/margin_xxlarge"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:layout_below="@id/lblClient"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:srcCompat="@drawable/avatar2"
+                app:strokeColor="@color/white" />
 
-        <View
-            android:layout_width="@dimen/margin_medium"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="@dimen/margin_medium_2"
-            android:background="@color/color_dark_grey"
+            <androidx.appcompat.widget.AppCompatSpinner
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignTop="@id/ivClient"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/ivClient"
+                android:backgroundTint="@color/color_dark_grey"
+                android:entries="@array/clientTeam"
+                android:theme="@style/CustomerSpinnerStyle" />
 
-            />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblProjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivClient"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/lbl_project_name"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
 
-        <include
-            android:id="@+id/endDate"
-            layout="@layout/view_calendar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblProjectName"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                app:boxStrokeColor="@color/custom_edittext_color"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1dp">
 
-    </LinearLayout>
+                <EditText
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_primary"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:theme="@style/CustomEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/lblAssignee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/llChooseDate"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium_3"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center"
-        android:text="ASSIGNEE"
-        android:textColor="@color/color_dark_grey"
-        android:textSize="@dimen/text_regular"
-        android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblProjectDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textLayoutProjectName"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="PROJECT DURATION"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llChooseDate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/lblProjectDuration"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAssignee"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lblAssignee"
-        android:layout_marginTop="@dimen/margin_medium_2"
-        android:clipToPadding="false"
-        android:elevation="180dp"
-        android:orientation="horizontal"
-        android:outlineProvider="bounds"
-        android:paddingHorizontal="28dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="5"
-        tools:listitem="@layout/view_holder_profile" />
+                <include
+                    android:id="@+id/startDate"
+                    layout="@layout/view_calendar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="@dimen/margin_medium"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:background="@color/color_dark_grey"
+
+                    />
+
+                <include
+                    android:id="@+id/endDate"
+                    layout="@layout/view_calendar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblAssignee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llChooseDate"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="ASSIGNEE"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/lblCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rvAssignee"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium_3"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center"
-        android:text="CATEGORY"
-        android:textColor="@color/color_dark_grey"
-        android:textSize="@dimen/text_regular"
-        android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAssignee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblAssignee"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:outlineProvider="bounds"
+                android:paddingHorizontal="28dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/view_holder_profile" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lblCategory"
-        android:layout_marginTop="@dimen/margin_medium_2"
-        android:clipToPadding="false"
-        android:elevation="180dp"
-        android:orientation="horizontal"
-        android:outlineProvider="bounds"
-        android:paddingEnd="@dimen/margin_medium_2"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="5"
-        tools:listitem="@layout/view_holder_category" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvAssignee"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="CATEGORY"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblCategory"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:elevation="180dp"
+                android:orientation="horizontal"
+                android:outlineProvider="bounds"
+                android:paddingEnd="@dimen/margin_medium_2"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/view_holder_category" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvCategory"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:background="@drawable/bg_description">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_toStartOf="@id/btnAttachment"
+                    android:paddingVertical="0dp"
+                    app:boxStrokeColor="@color/custom_edittext_dark_color"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        style="@style/ThemeOverlay.Material3.TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:hint="Description"
+                        android:maxLines="1"
+                        android:paddingVertical="0dp"
+                        android:textColor="@color/color_primary"
+                        android:textColorHint="@color/color_primary"
+                        android:theme="@style/CustomEditTextDark" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.thurainx.taskapp.views.components.CircularImageView
+                    android:id="@+id/btnAttachment"
+                    android:layout_width="@dimen/margin_xxlarge"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:padding="12dp"
+                    android:tint="@color/color_accent_green"
+                    app:srcCompat="@drawable/ic_paperclip"
+                    app:strokeColor="@color/color_dark_grey" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAttachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textLayoutDescription"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="ATTACHMENTS"
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold" />
+
+                <com.thurainx.taskapp.views.components.CircularImageView
+                    android:id="@+id/ivAttachment"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_below="@id/lblAttachment"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    app:srcCompat="@drawable/avatar2"
+                    app:strokeColor="@color/white" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAttachmentCancel"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_alignTop="@id/ivAttachment"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:background="@color/color_light_grey"
+                    android:scaleType="centerCrop"
+                    app:contentPadding="@dimen/margin_medium"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                    app:srcCompat="@drawable/ic_close" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAttachmentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textLayoutDescription"
+                    android:layout_alignTop="@id/ivAttachment"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_toEndOf="@id/ivAttachment"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Reference_1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAttachmentSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textLayoutDescription"
+                    android:layout_alignTop="@id/ivAttachment"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_toStartOf="@id/ivAttachmentCancel"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="168KB"
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="normal" />
+
+
+                <com.thurainx.taskapp.views.components.LineProgressIndicator
+                    android:id="@+id/lineProgressIndicatorAttachment"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_medium"
+                    android:layout_below="@id/lblAttachmentName"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_toLeftOf="@id/ivAttachmentCancel"
+                    android:layout_toRightOf="@id/ivAttachment"
+                    app:lineProgressBarColor="@color/color_accent_green"
+                    app:lineProgressBarThickness="2dp"
+                    app:lineProgressValue="55"
+                    app:maxLineValue="100"
+                    app:minLineValue="0" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCreateTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_below="@id/ivAttachment"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:backgroundTint="@color/color_accent_green"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/lbl_create_task"
+                    app:cornerRadius="@dimen/margin_large" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 </RelativeLayout>

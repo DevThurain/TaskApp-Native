@@ -12,4 +12,12 @@
         <attr name="progressBarColor" format="color"/>
         <attr name="progressBarThickness" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="LineProgressIndicator">
+        <attr name="minLineValue" format="integer"/>
+        <attr name="maxLineValue" format="integer"/>
+        <attr name="lineProgressValue" format="integer"/>
+        <attr name="lineProgressBarColor" format="color"/>
+        <attr name="lineProgressBarThickness" format="dimension"/>
+    </declare-styleable>
 </resources>

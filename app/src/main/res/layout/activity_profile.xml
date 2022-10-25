@@ -12,13 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        app:fabCustomSize="@dimen/margin_xxlarge"
-        android:scaleType="center"
         android:layout_marginTop="@dimen/margin_xxlarge"
         android:layout_marginEnd="@dimen/margin_medium_2"
         android:backgroundTint="@color/white"
         android:elevation="0dp"
-        android:src="@drawable/ic_close" />
+        android:scaleType="center"
+        android:src="@drawable/ic_close"
+        app:fabCustomSize="@dimen/margin_xxlarge" />
 
     <include
         android:id="@+id/vpProfile"
