@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/fabClose"
-        android:layout_marginTop="@dimen/margin_xxlarge" />
+        android:layout_marginTop="@dimen/margin_xlarge" />
 
     <RelativeLayout
         android:id="@+id/rlButtonSection"
@@ -85,6 +85,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rlButtonSection"
-        android:background="@color/color_light_grey" />
+        android:background="@color/color_light_grey" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfileTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_medium_2"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/view_holder_normal_task"
+            />
+    </FrameLayout>
 
 </RelativeLayout>

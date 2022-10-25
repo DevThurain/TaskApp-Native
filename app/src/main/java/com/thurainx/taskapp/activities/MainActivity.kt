@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity(),MainView {
 
     }
 
-    override fun navigateToProfileScreen() {
-        startActivity(ProfileActivity.getIntent(this))
+    override fun navigateToProfileScreen(profileId: Int) {
+        startActivity(ProfileActivity.getIntent(this,profileId))
     }
 
 

@@ -19,8 +19,8 @@ class MainPresenterImpl : MainPresenter, ViewModel() {
 
     override fun onTapProfile(profileVO: ProfileVO) {
         Log.d("profile",profileVO.id.toString())
-        if(profileVO.id == 0){
-            mainView?.navigateToProfileScreen()
+        if(profileVO.id != 0){
+            mainView?.navigateToProfileScreen(profileVO.id)
         }
     }
 }
