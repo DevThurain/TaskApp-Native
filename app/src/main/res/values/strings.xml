@@ -5,4 +5,13 @@
     <string name="lbl_create_additional_pages">Create additional\npages</string>
     <string name="lbl_closed_tasks">Closed tasks</string>
     <string name="lbl_open_tasks">Open tasks</string>
+    <string name="lbl_create_new_task">Create New Task</string>
+    <string name="lbl_client">CLIENT</string>
+    <string name="lbl_project_name">PROJECT NAME</string>
+
+    <string-array name="clientTeam">
+        <item>Team One</item>
+        <item>Team Two</item>
+        <item>Team Three</item>
+    </string-array>
 </resources>

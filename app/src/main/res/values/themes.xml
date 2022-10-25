@@ -35,5 +35,16 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="CustomerSpinnerStyle" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:colorBackground">@color/color_primary</item>
+    </style>
+
+    <style name="CustomEditText" >
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
 
 </resources>

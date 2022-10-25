@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_category_active.xml" value="0.2215" />
+        <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_category_inactive.xml" value="0.2215" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_normal_task.xml" value="0.2215" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_orange_button.xml" value="0.1135" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/drawable/bg_profile_section.xml" value="0.1135" />
@@ -12,9 +14,12 @@
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/activity_create_task.xml" value="0.25" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/activity_main.xml" value="0.16774791473586653" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/view_calendar.xml" value="0.4" />
+        <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/view_holder_category.xml" value="0.1" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/view_holder_normal_task.xml" value="0.264" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/view_holder_profile.xml" value="0.25" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/view_pod_profile_section.xml" value="0.2037037037037037" />
+        <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/viewholder_category.xml" value="0.264" />
         <entry key="..\:/Users/thura/AndroidStudioProjects/TaskApp/app/src/main/res/layout/viewholder_normal_task.xml" value="0.2" />
       </map>
     </option>

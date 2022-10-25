@@ -18,6 +18,14 @@
             android:theme="@style/Theme.TaskApp.translucentScreenWhiteStatusBar"
             android:exported="true" >
 
+
+
+        </activity>
+        <activity
+            android:name=".activities.CreateTaskActivity"
+            android:theme="@style/Theme.TaskApp.translucentScreenWhiteStatusBar"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,10 +33,6 @@
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".activities.CreateTaskActivity"
-            android:theme="@style/Theme.TaskApp.translucentScreenWhiteStatusBar"
-            android:exported="false" />
 
         <activity
             android:name=".activities.MainActivity"

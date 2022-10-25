@@ -1,6 +1,7 @@
 package com.thurainx.taskapp.data
 
 import com.thurainx.taskapp.R
+import com.thurainx.taskapp.data.vos.CategoryVO
 import com.thurainx.taskapp.data.vos.ProfileVO
 import com.thurainx.taskapp.data.vos.TaskVO
 
@@ -66,5 +67,20 @@ val dummyTaskList = listOf(
         title = "Develop Ios Version",
         messageCount = 3,
         attachmentCount = 5,
+    ),
+)
+
+val dummyCategoryList = listOf<CategoryVO>(
+    CategoryVO(
+        id = 1,
+        title = "Design",
+    ),
+    CategoryVO(
+        id = 2,
+        title = "Frontend",
+    ),
+    CategoryVO(
+        id = 3,
+        title = "Backend",
     ),
 )

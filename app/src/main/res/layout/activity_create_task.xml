@@ -1,9 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_primary"
     tools:context=".activities.CreateTaskActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateBack"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:padding="0dp"
+        app:icon="@drawable/ic_chevron_left"
+        app:iconTint="@color/white"
+        app:rippleColor="@android:color/transparent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnCreateBack"
+        android:layout_alignBottom="@id/btnCreateBack"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/btnCreateBack"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/lbl_create_new_task"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnCreateBack"
+        android:layout_alignBottom="@id/btnCreateBack"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="Save"
+        android:textColor="@color/color_accent_green"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCreateBack"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/lbl_client"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <com.thurainx.taskapp.views.components.CircularImageView
+        android:id="@+id/ivClient"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_below="@id/lblClient"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:strokeColor="@color/white"
+        app:srcCompat="@drawable/avatar2" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignTop="@id/ivClient"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/ivClient"
+        android:backgroundTint="@color/color_dark_grey"
+        android:entries="@array/clientTeam"
+        android:theme="@style/CustomerSpinnerStyle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblProjectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivClient"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/lbl_project_name"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayoutProjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_below="@id/lblProjectName"
+        app:boxStrokeColor="@color/custom_edittext_color"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="1dp">
+
+        <EditText
+            style="@style/ThemeOverlay.Material3.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary"
+            android:theme="@style/CustomEditText"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblProjectDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLayoutProjectName"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="PROJECT DURATION"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llChooseDate"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/lblProjectDuration"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginHorizontal="@dimen/margin_medium_2">
+
+
+        <include
+            android:id="@+id/startDate"
+            layout="@layout/view_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="@dimen/margin_medium"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:background="@color/color_dark_grey"
+
+            />
+
+        <include
+            android:id="@+id/endDate"
+            layout="@layout/view_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblAssignee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llChooseDate"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="ASSIGNEE"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAssignee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblAssignee"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:clipToPadding="false"
+        android:elevation="180dp"
+        android:orientation="horizontal"
+        android:outlineProvider="bounds"
+        android:paddingHorizontal="28dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/view_holder_profile" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvAssignee"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="CATEGORY"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblCategory"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:clipToPadding="false"
+        android:elevation="180dp"
+        android:orientation="horizontal"
+        android:outlineProvider="bounds"
+        android:paddingEnd="@dimen/margin_medium_2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/view_holder_category" />
+
+</RelativeLayout>
