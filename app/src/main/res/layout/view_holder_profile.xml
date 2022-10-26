@@ -11,6 +11,6 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/avatar1"
         app:strokeColor="@color/white"
-        app:strokeWidth="2dp" />
+        app:strokeWidth="@dimen/margin_small" />
 
 </RelativeLayout>

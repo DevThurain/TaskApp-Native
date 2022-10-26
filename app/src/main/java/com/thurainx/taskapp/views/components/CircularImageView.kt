@@ -18,9 +18,6 @@ class CircularImageView @JvmOverloads constructor(
     var strokeWidth = 2f
     var strokeColor = Color.BLACK
 
-    var offsetX = -25
-    var offsetY = 30
-    var blurRadius = 5
 
     init {
         context.withStyledAttributes(attrs, R.styleable.CircularImageView){
@@ -44,24 +41,13 @@ class CircularImageView @JvmOverloads constructor(
         canvas?.drawCircle( (size / 2).toFloat(), (size / 2).toFloat(), ((size - strokeWidth) / 2),paint)
 
          //clip to circle
-        path.addCircle((size / 2).toFloat(), (size / 2).toFloat(), ((size - (strokeWidth * 2)) / 2), Path.Direction.CW)
+        path.addCircle((size / 2).toFloat(), (size / 2).toFloat(), ((size - (strokeWidth)) / 2), Path.Direction.CCW)
         canvas?.clipPath(path)
 
         super.onDraw(canvas)
     }
 
-    fun drawShadow(canvas: Canvas?){
-        paint.color = Color.BLACK
-        paint.style = Paint.Style.FILL
-        paint.maskFilter = BlurMaskFilter(
-            blurRadius.toFloat() /* shadowRadius */,
-            BlurMaskFilter.Blur.NORMAL
-        )
-        val size = width.coerceAtMost(height)
 
-        canvas?.drawCircle( (size / 2).toFloat(), (size / 2).toFloat(), ((size - strokeWidth) / 2),paint)
-        paint.maskFilter = null
-    }
 
 
 }
