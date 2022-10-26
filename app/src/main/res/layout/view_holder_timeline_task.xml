@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTimeLine"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layoutTask"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDataText"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="24.9"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_smaller"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCircleIndicator"
+            android:layout_width="@dimen/margin_card_medium_2"
+            android:layout_height="@dimen/margin_card_medium_2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:background="@color/color_accent_orange"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDataText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <View
+            android:id="@+id/upperConnectionPipe"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/color_dark_grey"
+            android:elevation="0dp"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="@+id/ivCircleIndicator"
+            app:layout_constraintStart_toStartOf="@+id/ivCircleIndicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/lowerConnectionPipe"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/color_dark_grey"
+            android:elevation="0dp"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivCircleIndicator"
+            app:layout_constraintStart_toStartOf="@+id/ivCircleIndicator"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/layoutTimeLine"
+        android:background="@drawable/bg_normal_task">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="In progress"
+            android:textColor="@color/color_accent_orange"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="3h"
+            android:textColor="@color/color_dark_grey"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProfileStatus"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Contact Page"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llTaskMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTaskTitle"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:src="@drawable/ic_message"
+                android:tint="@color/color_dark_grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTaskMessageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="3"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTaskAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTaskTitle"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/llTaskMessage"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:src="@drawable/ic_paperclip"
+                android:tint="@color/color_dark_grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTaskAttachmentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="5"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.thurainx.taskapp.views.components.CircularImageView
+            android:id="@+id/ivTaskProfile"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xlarge"
+            android:layout_below="@id/tvTaskTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/avatar1"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaskNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivTaskProfile"
+            android:layout_alignBottom="@id/ivTaskProfile"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_toStartOf="@id/ivTaskProfile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="No 156"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

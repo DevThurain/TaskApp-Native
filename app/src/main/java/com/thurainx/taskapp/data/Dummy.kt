@@ -1,5 +1,6 @@
 package com.thurainx.taskapp.data
 
+import android.graphics.Color
 import com.thurainx.taskapp.R
 import com.thurainx.taskapp.data.vos.CategoryVO
 import com.thurainx.taskapp.data.vos.ProfileVO
@@ -39,6 +40,9 @@ val dummyTaskList = listOf(
         title = "Contact Page",
         messageCount = 5,
         attachmentCount = 2,
+        taskColor = R.color.color_accent_orange,
+        taskData = "24.1",
+        connected = true
     ),
     TaskVO(
         id = 1,
@@ -46,6 +50,10 @@ val dummyTaskList = listOf(
         title = "Develop UI/UX",
         messageCount = 3,
         attachmentCount = 1,
+        taskColor = R.color.color_purple,
+        taskData = "25.0",
+        connected = true
+
     ),
     TaskVO(
         id = 1,
@@ -53,6 +61,7 @@ val dummyTaskList = listOf(
         title = "Create Mobile Version",
         messageCount = 6,
         attachmentCount = 6,
+        taskData = ""
     ),
     TaskVO(
         id = 1,
@@ -60,6 +69,9 @@ val dummyTaskList = listOf(
         title = "Buttons, pop-up",
         messageCount = 1,
         attachmentCount = 2,
+        taskColor = R.color.color_accent_orange,
+        taskData = "15.2"
+
     ),
     TaskVO(
         id = 1,
@@ -67,6 +79,7 @@ val dummyTaskList = listOf(
         title = "Develop Ios Version",
         messageCount = 3,
         attachmentCount = 5,
+        taskData = "20.0"
     ),
 )
 

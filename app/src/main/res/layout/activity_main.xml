@@ -117,16 +117,48 @@
             app:progressBarColor="@color/color_accent_orange"
             app:progressBarThickness="@dimen/margin_small" />
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/rvProfile"
-            android:background="@drawable/bg_task_layout"
             android:layout_marginTop="@dimen/margin_medium_2"
-            >
+            android:background="@drawable/bg_task_layout">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Data"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="56dp"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:background="@drawable/bg_dotted" />
 
 
-        </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTimeLineTask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/lblData"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_medium_2"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/view_holder_timeline_task" />
+
+
+        </RelativeLayout>
 
 
 

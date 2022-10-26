@@ -12,6 +12,8 @@
     <color name="color_primary">#33354E</color>
     <color name="color_accent_orange">#F26950</color>
     <color name="color_accent_green">#2CC09C</color>
+    <color name="color_transparent">#00FFFFFF</color>
     <color name="color_dark_grey">#AEB7CA</color>
     <color name="color_light_grey">#F0F4FD</color>
+    <color name="color_purple">#5A55CA</color>
 </resources>

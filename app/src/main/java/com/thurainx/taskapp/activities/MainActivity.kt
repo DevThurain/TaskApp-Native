@@ -7,7 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.thurainx.taskapp.R
 import com.thurainx.taskapp.adapters.ProfileAdapter
+import com.thurainx.taskapp.adapters.TimeLineTaskAdapter
 import com.thurainx.taskapp.data.dummyProfileList
+import com.thurainx.taskapp.data.dummyTaskList
 import com.thurainx.taskapp.data.vos.ProfileVO
 import com.thurainx.taskapp.delegates.ProfileDelegate
 import com.thurainx.taskapp.mvp.presenters.MainPresenter
@@ -18,7 +20,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),MainView {
 
+    // adapters
     lateinit var mProfileAdapter: ProfileAdapter
+    lateinit var mTimeLineTaskAdapter: TimeLineTaskAdapter
+
+    // presenter
     lateinit var mainPresenter: MainPresenter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +32,7 @@ class MainActivity : AppCompatActivity(),MainView {
 
         setupPresenter()
         setupProfileRecyclerView()
+        setupTaskRecyclerView()
         mainPresenter.onUiReady(this)
     }
 
@@ -41,6 +48,11 @@ class MainActivity : AppCompatActivity(),MainView {
         
         mProfileAdapter.setNewData(dummyProfileList)
 
+    }
+
+    private fun setupTaskRecyclerView(){
+        mTimeLineTaskAdapter = TimeLineTaskAdapter(dummyTaskList)
+        rvTimeLineTask.adapter = mTimeLineTaskAdapter
     }
 
     override fun navigateToProfileScreen(profileId: Int) {
