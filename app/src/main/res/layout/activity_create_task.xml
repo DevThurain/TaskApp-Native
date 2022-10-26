@@ -8,7 +8,7 @@
     tools:context=".activities.CreateTaskActivity">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCreateBack"
+        android:id="@+id/btnCreateTaskBack"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,11 +22,11 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btnCreateBack"
-        android:layout_alignBottom="@id/btnCreateBack"
+        android:layout_alignTop="@id/btnCreateTaskBack"
+        android:layout_alignBottom="@id/btnCreateTaskBack"
         android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginTop="2dp"
-        android:layout_toEndOf="@id/btnCreateBack"
+        android:layout_toEndOf="@id/btnCreateTaskBack"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
         android:text="@string/lbl_create_new_task"
@@ -37,8 +37,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btnCreateBack"
-        android:layout_alignBottom="@id/btnCreateBack"
+        android:layout_alignTop="@id/btnCreateTaskBack"
+        android:layout_alignBottom="@id/btnCreateTaskBack"
         android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginEnd="@dimen/margin_medium_2"
         android:layout_marginTop="2dp"
@@ -54,7 +54,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/btnCreateBack">
+        android:layout_below="@id/btnCreateTaskBack">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -64,7 +64,6 @@
                 android:id="@+id/lblClient"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/btnCreateBack"
                 android:layout_marginStart="@dimen/margin_medium_2"
                 android:layout_marginTop="@dimen/margin_medium_2"
                 android:fontFamily="@font/poppins_regular"
@@ -154,8 +153,8 @@
 
 
                 <include
-                    android:id="@+id/startDate"
-                    layout="@layout/view_calendar"
+                    android:id="@+id/vpStartDate"
+                    layout="@layout/view_pod_calendar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -170,8 +169,8 @@
                     />
 
                 <include
-                    android:id="@+id/endDate"
-                    layout="@layout/view_calendar"
+                    android:id="@+id/vpEndDate"
+                    layout="@layout/view_pod_calendar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />

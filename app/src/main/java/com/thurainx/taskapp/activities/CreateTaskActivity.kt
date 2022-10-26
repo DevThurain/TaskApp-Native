@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import com.thurainx.taskapp.R
 import com.thurainx.taskapp.adapters.CategoryAdapter
 import com.thurainx.taskapp.adapters.ProfileAdapter
@@ -14,13 +16,25 @@ import com.thurainx.taskapp.data.vos.CategoryVO
 import com.thurainx.taskapp.data.vos.ProfileVO
 import com.thurainx.taskapp.delegates.CategoryDelegate
 import com.thurainx.taskapp.delegates.ProfileDelegate
+import com.thurainx.taskapp.mvp.presenters.CreateTaskPresenter
+import com.thurainx.taskapp.mvp.presenters.CreateTaskPresenterImpl
+import com.thurainx.taskapp.mvp.views.CreateTaskView
 import com.thurainx.taskapp.views.components.OverlapDecoration
+import com.thurainx.taskapp.views.viewpods.CalendarViewPod
 import kotlinx.android.synthetic.main.activity_create_task.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-class CreateTaskActivity : AppCompatActivity(), ProfileDelegate, CategoryDelegate {
+class CreateTaskActivity : AppCompatActivity(), CreateTaskView {
+    // adapters
     lateinit var mProfileAdapter: ProfileAdapter
     lateinit var mCategoryAdapter: CategoryAdapter
+
+    // viewPods
+    var viewPodStartDate: CalendarViewPod? = null
+    var viewPodEndDate: CalendarViewPod? = null
+
+    // presenter
+    lateinit var mCreateTaskPresenter: CreateTaskPresenter
 
     companion object{
         fun getIntent(context: Context) : Intent {
@@ -32,14 +46,30 @@ class CreateTaskActivity : AppCompatActivity(), ProfileDelegate, CategoryDelegat
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_task)
 
-//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFTINPUAD)
 
+        setupPresenter()
+
+        setupListeners()
         setupProfileRecyclerView()
         setupCategoryRecyclerView()
+        setupViewPods()
+
+        mCreateTaskPresenter.onUiReady(this)
+    }
+
+    private fun setupPresenter(){
+        mCreateTaskPresenter = ViewModelProvider(this)[CreateTaskPresenterImpl::class.java]
+        mCreateTaskPresenter.initializeView(this)
+    }
+
+    private fun setupListeners(){
+        btnCreateTaskBack.setOnClickListener {
+            mCreateTaskPresenter.onTapBack()
+        }
     }
 
     private fun setupProfileRecyclerView() {
-        mProfileAdapter = ProfileAdapter(this)
+        mProfileAdapter = ProfileAdapter(mCreateTaskPresenter)
         rvAssignee.adapter = mProfileAdapter
         rvAssignee.addItemDecoration(OverlapDecoration())
 
@@ -48,26 +78,38 @@ class CreateTaskActivity : AppCompatActivity(), ProfileDelegate, CategoryDelegat
     }
 
     private fun setupCategoryRecyclerView(){
-        mCategoryAdapter = CategoryAdapter(this)
+        mCategoryAdapter = CategoryAdapter(mCreateTaskPresenter)
         rvCategory.adapter = mCategoryAdapter
 
         if(dummyCategoryList.isNotEmpty()){
             dummyCategoryList.first().isSelected = true
             mCategoryAdapter.setNewData(dummyCategoryList)
-
         }
     }
 
-    override fun onTapProfile(profileVO: ProfileVO) {
+    private fun setupViewPods(){
+        viewPodStartDate = vpStartDate as CalendarViewPod
+        viewPodEndDate  = vpEndDate as CalendarViewPod
 
+        viewPodStartDate?.setupViewPod(this)
+        viewPodEndDate?.setupViewPod(this)
     }
 
-    override fun onTapCategory(categoryVO: CategoryVO) {
-        dummyCategoryList.forEach {
-            it.isSelected = it.id == categoryVO.id
-        }
 
+    override fun navigateToProfileScreen(profileId: Int) {
+        startActivity(ProfileActivity.getIntent(this,profileId))
+    }
+
+    override fun setNewCategoryList(categoryList: List<CategoryVO>) {
         mCategoryAdapter.setNewData(dummyCategoryList)
+    }
+
+    override fun navigateBack() {
+        super.onBackPressed()
+    }
+
+    override fun showError(message: String) {
+        Snackbar.make(window.decorView,message, Snackbar.LENGTH_SHORT).show()
     }
 
 }

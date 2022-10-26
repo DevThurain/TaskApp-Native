@@ -20,10 +20,15 @@ import kotlinx.android.synthetic.main.view_pod_profile_section.*
 
 const val EXTRA_PROFILE_ID = "EXTRA_PROFILE_ID"
 class ProfileActivity : AppCompatActivity(), ProfileView {
+    // adapters
     lateinit var mTaskAdapter: NormalTaskAdapter
+
+    // presenter
+    lateinit var mProfilePresenter: ProfilePresenter
+
+    // states
     private val tabList = listOf("Project Tasks", "Contacts", "About You")
 
-    lateinit var mProfilePresenter: ProfilePresenter
 
     companion object{
         fun getIntent(context: Context,profileId: Int) : Intent{
