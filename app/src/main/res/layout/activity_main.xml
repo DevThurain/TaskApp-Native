@@ -128,8 +128,8 @@
                 android:id="@+id/lblData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_medium"
-                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginStart="@dimen/margin_card_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Data"
                 android:textColor="@color/color_dark_grey"
@@ -137,12 +137,57 @@
                 android:textStyle="bold" />
 
             <View
+                android:id="@+id/viewDottedLine"
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/margin_xlarge"
                 android:layout_marginStart="56dp"
                 android:layout_marginBottom="@dimen/margin_medium_2"
                 android:background="@drawable/bg_dotted" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblTasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lblData"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/viewDottedLine"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/lbl_tasks"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lblData"
+                android:layout_alignParentEnd="true"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblShowInDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/lbl_show_in_days"
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMainDropDown"
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:tint="@color/color_dark_grey"
+                    app:srcCompat="@drawable/ic_dropdown" />
+
+            </LinearLayout>
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -152,6 +197,7 @@
                 android:layout_below="@id/lblData"
                 android:clipToPadding="false"
                 android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_medium_2"
                 android:paddingBottom="@dimen/margin_medium_2"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="10"

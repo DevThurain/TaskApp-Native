@@ -9,6 +9,8 @@
     <string name="lbl_client">CLIENT</string>
     <string name="lbl_project_name">PROJECT NAME</string>
     <string name="lbl_create_task">CREATE TASK</string>
+    <string name="lbl_tasks">Tasks</string>
+    <string name="lbl_show_in_days">Show in days</string>
 
     <string-array name="clientTeam">
         <item>Team One</item>
