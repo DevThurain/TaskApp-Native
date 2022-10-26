@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import com.thurainx.taskapp.R
 import com.thurainx.taskapp.adapters.ProfileAdapter
 import com.thurainx.taskapp.data.dummyProfileList
@@ -44,6 +45,14 @@ class MainActivity : AppCompatActivity(),MainView {
 
     override fun navigateToProfileScreen(profileId: Int) {
         startActivity(ProfileActivity.getIntent(this,profileId))
+    }
+
+    override fun navigateToCreateTaskScreen() {
+        startActivity(CreateTaskActivity.getIntent(this))
+    }
+
+    override fun showError(message: String) {
+        Snackbar.make(window.decorView,message, Snackbar.LENGTH_SHORT).show()
     }
 
 

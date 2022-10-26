@@ -21,6 +21,8 @@ class MainPresenterImpl : MainPresenter, ViewModel() {
         Log.d("profile",profileVO.id.toString())
         if(profileVO.id != 0){
             mainView?.navigateToProfileScreen(profileVO.id)
+        }else{
+            mainView?.navigateToCreateTaskScreen()
         }
     }
 }
