@@ -87,6 +87,7 @@ val dummyCategoryList = listOf<CategoryVO>(
     CategoryVO(
         id = 1,
         title = "Design",
+        isSelected = true
     ),
     CategoryVO(
         id = 2,

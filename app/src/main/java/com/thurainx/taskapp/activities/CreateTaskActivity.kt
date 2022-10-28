@@ -82,7 +82,6 @@ class CreateTaskActivity : AppCompatActivity(), CreateTaskView {
         rvCategory.adapter = mCategoryAdapter
 
         if(dummyCategoryList.isNotEmpty()){
-            dummyCategoryList.first().isSelected = true
             mCategoryAdapter.setNewData(dummyCategoryList)
         }
     }
