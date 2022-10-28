@@ -11,6 +11,11 @@
     <string name="lbl_create_task">CREATE TASK</string>
     <string name="lbl_tasks">Tasks</string>
     <string name="lbl_show_in_days">Show in days</string>
+    <string name="lbl_project_duration">PROJECT DURATION</string>
+    <string name="lbl_assignee">ASSIGNEE</string>
+    <string name="lbl_category">CATEGORY</string>
+    <string name="lbl_description">Description</string>
+    <string name="lbl_attachments">ATTACHMENTS</string>
 
     <string-array name="clientTeam">
         <item>Team One</item>

@@ -8,8 +8,8 @@
 
     <com.thurainx.taskapp.views.components.CircularImageView
         android:id="@+id/ivProfileCover"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="@dimen/size_profile_cover"
+        android:layout_height="@dimen/size_profile_cover"
         android:scaleType="centerCrop"
         android:src="@drawable/avatar1"
         android:translationZ="1dp"
@@ -23,7 +23,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="@dimen/height_profile_margin_100_n"
         android:background="@drawable/bg_profile_section"
         app:layout_constraintTop_toBottomOf="@+id/ivProfileCover">
 
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="@dimen/margin_top_profile_text_section"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -135,10 +135,10 @@
 
     <com.thurainx.taskapp.views.components.CircularImageView
         android:id="@+id/ivProfileStatus"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="18dp"
+        android:layout_width="@dimen/size_active_status"
+        android:layout_height="@dimen/size_active_status"
+        android:layout_marginEnd="@dimen/active_status_margin_end"
+        android:layout_marginBottom="@dimen/active_status_margin_bottom"
         android:scaleType="centerCrop"
         android:translationZ="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/ivProfileCover"

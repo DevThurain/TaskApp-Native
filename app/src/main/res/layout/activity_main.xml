@@ -29,7 +29,7 @@
             android:layout_alignTop="@id/btnMainBack"
             android:layout_alignBottom="@id/btnMainBack"
             android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="@dimen/margin_smaller"
             android:layout_toEndOf="@id/btnMainBack"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
@@ -91,7 +91,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvProfile"
-            android:layout_width="250dp"
+            android:layout_width="@dimen/width_profile_recyclerview"
             android:layout_height="wrap_content"
             android:layout_below="@id/lblMainDate"
             android:layout_marginTop="@dimen/margin_medium_2"
@@ -138,7 +138,7 @@
 
             <View
                 android:id="@+id/viewDottedLine"
-                android:layout_width="2dp"
+                android:layout_width="@dimen/margin_smaller"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="@dimen/margin_xlarge"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?> <resources>
 
     <!-- Generic with ratio -->
+    <dimen name="margin_smaller">2dp</dimen>
     <dimen name="margin_small">4dp</dimen>
     <dimen name="margin_card_medium">6dp</dimen>
     <dimen name="margin_medium">8dp</dimen>
@@ -31,8 +32,25 @@
     <dimen name="text_big_2x">60sp</dimen>
     <dimen name="text_big_3x">80sp</dimen>
 
-    <!--    App Specific -->
 
+    <!--    App Specific -->
+    <dimen name="size_profile_cover">140dp</dimen>
+    <dimen name="height_profile_margin_100_n">-100dp</dimen>
+    <dimen name="height_calendar_view_pod">45dp</dimen>
+    <dimen name="size_calendar_logo">size_calendar_logo</dimen>
+    <dimen name="width_timeline_data_section">65dp</dimen>
+    <dimen name="width_timeline_text">25dp</dimen>
+    <dimen name="width_timeline_pipe">3dp</dimen>
+    <dimen name="size_active_status">25dp</dimen>
+    <dimen name="active_status_margin_end">8dp</dimen>
+    <dimen name="active_status_margin_bottom">18dp</dimen>
+    <dimen name="margin_top_profile_text_section">110dp</dimen>
+    <dimen name="padding_profile_button">12dp</dimen>
+    <dimen name="width_message_button">190dp</dimen>
+    <dimen name="height_message_button">58dp</dimen>
+    <dimen name="width_tab">130dp</dimen>
+    <dimen name="width_profile_recyclerview">250dp</dimen>
+    <dimen name="height_client_spinner">45dp</dimen>
 
 
 </resources>

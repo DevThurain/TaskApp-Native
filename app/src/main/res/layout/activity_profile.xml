@@ -40,7 +40,7 @@
             android:layout_width="@dimen/margin_xxlarge"
             android:layout_height="@dimen/margin_xxlarge"
             android:layout_marginStart="@dimen/margin_medium_2"
-            android:padding="12dp"
+            android:padding="@dimen/padding_profile_button"
             android:tint="@color/color_accent_green"
             app:srcCompat="@drawable/ic_share"
             app:strokeColor="@color/color_accent_green" />
@@ -50,15 +50,15 @@
             android:layout_height="@dimen/margin_xxlarge"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/margin_medium_2"
-            android:padding="12dp"
+            android:padding="@dimen/padding_profile_button"
             android:tint="@color/color_accent_green"
             app:srcCompat="@drawable/ic_tasks_complete"
             app:strokeColor="@color/color_accent_green" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnProfileMessage"
-            android:layout_width="190dp"
-            android:layout_height="58dp"
+            android:layout_width="@dimen/width_message_button"
+            android:layout_height="@dimen/height_message_button"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/color_accent_green"
             android:elevation="0dp"
@@ -74,7 +74,7 @@
             android:background="@color/white"
             app:tabIndicatorColor="@color/color_accent_green"
             app:tabIndicatorHeight="3dp"
-            app:tabMinWidth="130dp"
+            app:tabMinWidth="@dimen/width_tab"
             app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/color_primary"
             app:tabTextAppearance="@style/CustomTabTextAppearance"

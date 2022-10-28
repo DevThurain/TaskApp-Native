@@ -7,14 +7,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutTimeLine"
-        android:layout_width="65dp"
+        android:layout_width="@dimen/width_timeline_data_section"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/layoutTask"
         android:layout_alignParentTop="true">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvDataText"
-            android:layout_width="25dp"
+            android:layout_width="@dimen/width_timeline_text"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_medium_2"
             android:fontFamily="@font/poppins_regular"
@@ -42,7 +42,7 @@
 
         <View
             android:id="@+id/upperConnectionPipe"
-            android:layout_width="3dp"
+            android:layout_width="@dimen/width_timeline_pipe"
             android:layout_height="0dp"
             android:background="@color/color_dark_grey"
             android:elevation="0dp"
@@ -54,7 +54,7 @@
 
         <View
             android:id="@+id/lowerConnectionPipe"
-            android:layout_width="3dp"
+            android:layout_width="@dimen/width_timeline_pipe"
             android:layout_height="0dp"
             android:background="@color/color_dark_grey"
             android:elevation="0dp"
@@ -173,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_small"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="@dimen/margin_smaller"
                 android:fontFamily="@font/poppins_regular"
                 android:text="5"
                 android:textColor="@color/color_primary"
