@@ -31,8 +31,21 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:navigationBarColor">@color/color_light_grey</item>
+<!--        <item name="android:navigationBarColor">@color/color_primary</item>-->
     </style>
+
+    <style name="Theme.TaskApp.TransparentDarkStatusBar" parent="Theme.TaskApp">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.TaskApp.TransparentLightStatusBar" parent="Theme.TaskApp">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/color_primary</item>
+    </style>
+
 
     <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">15sp</item>
