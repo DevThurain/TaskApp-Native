@@ -58,9 +58,9 @@ class ProfileActivity : AppCompatActivity(), ProfileView {
     }
 
     private fun setupRecyclerView() {
-        val image = dummyProfileList.filter { it.id == intent.getIntExtra(EXTRA_PROFILE_ID,1) }.first().profileImage
+        val profile = dummyProfileList.filter { it.id == intent.getIntExtra(EXTRA_PROFILE_ID,1) }.first()
         dummyTaskList.forEach {
-            it.profileImage = image
+            it.profile = profile
         }
         mTaskAdapter = NormalTaskAdapter(dummyTaskList)
         rvProfileTask.adapter = mTaskAdapter

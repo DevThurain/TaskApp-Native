@@ -26,7 +26,7 @@ class NormalTaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.tvTaskTitle.text = taskVO.title
         itemView.tvTaskMessageCount.text = taskVO.messageCount.toString()
         itemView.tvTaskAttachmentCount.text = taskVO.attachmentCount.toString()
-        itemView.ivTaskProfile.setImageResource(taskVO.profileImage)
+        itemView.ivTaskProfile.setImageResource(taskVO.profile.profileImage)
     }
 
 

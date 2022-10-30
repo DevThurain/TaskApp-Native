@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(),MainView {
     }
 
     private fun setupTaskRecyclerView(){
-        mTimeLineTaskAdapter = TimeLineTaskAdapter(dummyTaskList)
+        mTimeLineTaskAdapter = TimeLineTaskAdapter(dummyTaskList, mainPresenter)
         rvTimeLineTask.adapter = mTimeLineTaskAdapter
     }
 

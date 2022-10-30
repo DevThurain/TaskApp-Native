@@ -52,7 +52,8 @@ val dummyTaskList = listOf(
         attachmentCount = 1,
         taskColor = R.color.color_purple,
         taskData = "25.0",
-        connected = true
+        connected = true,
+        profile = dummyProfileList[1]
 
     ),
     TaskVO(

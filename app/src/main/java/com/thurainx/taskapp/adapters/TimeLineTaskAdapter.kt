@@ -10,12 +10,12 @@ import com.thurainx.taskapp.delegates.ProfileDelegate
 import com.thurainx.taskapp.viewholders.TimeLineTaskViewHolder
 
 
-class TimeLineTaskAdapter(private val mTaskList: List<TaskVO>) :
+class TimeLineTaskAdapter(private val mTaskList: List<TaskVO>, private val profileDelegate: ProfileDelegate) :
     RecyclerView.Adapter<TimeLineTaskViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeLineTaskViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_holder_timeline_task, parent, false)
-        return TimeLineTaskViewHolder(view)
+        return TimeLineTaskViewHolder(view, profileDelegate)
     }
 
     override fun onBindViewHolder(holder: TimeLineTaskViewHolder, position: Int) {
